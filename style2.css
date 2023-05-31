@@ -1,0 +1,47 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 50px;
+}
+input[type="checkbox"]{
+  display: none;
+}
+input:checked + #s1{
+  background: greenyellow;
+}
+label{
+  position: relative;
+}
+.s1{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  padding: 5px;
+  user-select: none;
+  border-radius: 0;
+  display: inline-block;
+  border: solid grey 5px;
+}
+input:checked + .s1{
+  border: green solid 5px;
+  background: url("checked.jpg");
+  background-size: 27px 27px;
+  background-position: 2px 2px;
+  background-repeat: no-repeat;
+}
+input:checked ~ .titulo{
+  color: green;  
+}
+.titulo{
+  position: relative;
+  top:-8px;
+  left: 5px;
+  font-size: 35px;
+  display: inline-block;
+  color: grey;
+}
+label{display: block;}
