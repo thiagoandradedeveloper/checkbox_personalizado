@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .coluna{
     position: relative;
@@ -18,4 +19,4 @@ iframe{
     width: 82%;
     left: 14%;
     font-size: 30px;
-  }
+}
