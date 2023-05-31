@@ -14,6 +14,7 @@ input:checked + #s1{
 }
 label{
   position: relative;
+  width: auto;
 }
 .s1{
   position: relative;
@@ -24,7 +25,8 @@ label{
   user-select: none;
   border-radius: 0;
   display: inline-block;
-  border: solid grey 5px;
+  border: grey 5px solid;
+  /*box-shadow: 5px 2px 2px grey;*/
 }
 input:checked + .s1{
   border: green solid 5px;
@@ -46,3 +48,17 @@ input:checked ~ .titulo{
   user-select: none;
 }
 label{ display: block; }
+.linha{
+  position: absolute;
+  background-color: grey;
+  width: 0;
+  height: 3px;
+  top:calc(50%);
+  left: 0px;
+  transition: .1s;
+}
+
+input:checked ~ .titulo .linha{
+  width: 100%;
+  background-color: green;
+}

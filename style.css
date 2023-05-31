@@ -1,50 +1,21 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-body{
-  padding: 50px;
+.coluna{
+    position: relative;
+    display: inline-block;
+    margin: 5px;
 }
-input[type="checkbox"]{
-  display: none;
+iframe{
+    height: 450px;
+    width: 350px;
 }
-input:checked + #s1{
-  background: greenyellow;
-}
-label{
-  position: relative;
-}
-.s1{
-  position: relative;
-  width: 80px;
-  height: 40px;
-  background: grey;
-  padding: 5px;
-  user-select: none;
-  transition: .1s;
-  border-radius: 25px;
-  display: inline-block;
-}
-.s2{  
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  transition: .1s;
-  border-radius: 50%;
-}
-.titulo1{
-  position: relative;
-  top: -7px;
-  font-size: 35px;
-  display: inline-block;
-  user-select: none;
-}
-input:checked + .s1{
-  padding-left: 45px;
-  background: yellowgreen;
-}
-input:checked + .s1 .s2{
-  background: green;
-}
+.original{
+    position: relative;
+    width: 82%;
+    left: 14%;
+    font-size: 30px;
+  }
