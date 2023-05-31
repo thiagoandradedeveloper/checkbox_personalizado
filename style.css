@@ -46,5 +46,5 @@ input:checked + .s1{
   background: yellowgreen;
 }
 input:checked + .s1 .s2{
-  background: yellow;
+  background: green;
 }
