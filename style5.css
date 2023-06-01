@@ -6,54 +6,42 @@
 body{
   padding: 50px;
 }
+label{
+  background: red;
+}
+.flipper{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+}
+.flipper .front, .flipper .back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 0.3s;
+}
+.flipper .back{
+  background: url('noite.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
+.flipper .front{
+  background: url('dia.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 input[type="checkbox"]{
   display: none;
 }
-input:checked + #s1{
-  background: greenyellow;
+input:checked + .flipper .back{
+  transform: rotateY(0deg);
 }
-label{
-  position: relative;
+input:checked + .flipper .front{
+  transform: rotateY(180deg);
 }
-.s1{
-  position: relative;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  user-select: none;
-  border-radius: 50%;
-  display: inline-block;
-  border: 5px solid red;
-  background: url("l2.svg");
-  background-size: 22px 22px;
-  background-position: 4px 4px;
-  background-repeat: no-repeat;
-}
-input:checked + .s1{
-  border: 5px solid green;
-  background: url("l1.svg");
-  background-size: 22px 22px;
-  background-position: 4px 4px;
-  background-repeat: no-repeat;
-}
-input:checked ~ .titulo{
-  color: green;  
-}
-.titulo{
-  position: relative;
-  top:-8px;
-  left: 5px;
-  font-size: 35px;
-  display: inline-block;
-  color: red;
-  user-select: none;
-}
-label{ display: block; }
-
-input:checked ~ .s1 .fundo{
-  background: blue;
-  width: 60px;
-  height: 60px;
-}
-
-
